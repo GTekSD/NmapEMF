@@ -1,3 +1,30 @@
+"""
+Nmap Parser (nparser)
+
+Description:
+This script is designed to parse Nmap scan results and filter the ports based on their states (open, closed, filtered). It takes an Nmap output file and organizes the information, allowing users to quickly identify active services on the scanned hosts.
+
+Usage:
+To use the script, provide the path to an Nmap output file as a positional argument. You can optionally specify an output file to save the results, or filter the results by only showing open, closed, or filtered ports.
+
+Example:
+1. To parse an Nmap output file and display results on the console:
+   python nparser.py nmap-output.txt
+
+2. To save the filtered output to a file:
+   python nparser.py nmap-output.txt -o converted-output.txt
+
+3. To show only open ports:
+   python nparser.py nmap-output.txt -op
+
+4. To show only closed ports:
+   python nparser.py nmap-output.txt -cp
+
+5. To show only filtered ports:
+   python nparser.py nmap-output.txt -fp
+"""
+
+
 import argparse
 
 # Banner
